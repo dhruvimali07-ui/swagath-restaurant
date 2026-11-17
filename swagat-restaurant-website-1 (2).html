@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swagat Restaurant · સ્વાગત — શુદ્ધ શાકાહારી | WhatsApp Order & Table Booking</title>
+<meta name="description" content="સ્વાગત શુદ્ધ શાકાહારી ફેમિલી રેસ્ટોરેન્ટ — ઘર બેઠા WhatsApp પર ઓર્ડર કરો (Cash on Delivery / WhatsApp Pay) અને ટેબલ બુકિંગ કરો. Gujarati Thali ₹210 · Punjabi Thali ₹260.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕉️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Poppins:wght@400;600;700;800&family=Noto+Sans+Gujarati:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SWAGAT RESTAURANT — स्वागत शुद्ध શાકાહારી
+   Unique theme: "Tamba-Pittal" (brass/copper on deep tulsi green)
+   ============================================================ */
+:root{
+  --green-950:#0c2b1e; --green-900:#123526; --green-800:#1a4a33; --green-700:#226140;
+  --gold:#e8a020; --gold-soft:#f4c15d; --copper:#c96f2e; --chili:#d84a2b;
+  --cream:#faf4e6; --cream-2:#f3e8cf; --ink:#2a2118; --muted:#8a7a63;
+  --ok:#2e7d4f; --card:#fffdf7;
+  --shadow:0 10px 30px rgba(20,40,30,.14);
+  --r:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins','Noto Sans Gujarati',system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+h1,h2,h3,.display{font-family:'Yatra One','Noto Sans Gujarati',cursive;font-weight:400}
+section{padding:64px 18px}
+.wrap{max-width:1120px;margin:0 auto}
+.center{text-align:center}
+
+/* ---------- top bar ---------- */
+.topbar{background:var(--green-950);color:var(--cream);font-size:.82rem;display:flex;justify-content:center;gap:18px;padding:7px 12px;flex-wrap:wrap}
+.topbar b{color:var(--gold-soft)}
+.topbar a{color:var(--cream);text-decoration:none}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:60;background:rgba(250,244,230,.92);backdrop-filter:blur(10px);border-bottom:1px solid #e7dcc2}
+.nav-in{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:10px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--green-900)}
+.brand .kalash{width:42px;height:42px;border-radius:12px;background:linear-gradient(145deg,var(--gold),var(--copper));display:grid;place-items:center;font-size:22px;color:#fff;box-shadow:0 4px 12px rgba(200,110,40,.35)}
+.brand b{font-family:'Yatra One';font-size:1.25rem;letter-spacing:.5px}
+.brand small{display:block;font-size:.68rem;color:var(--muted);letter-spacing:2px;text-transform:uppercase}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-links a{color:var(--green-900);text-decoration:none;font-weight:600;font-size:.92rem;position:relative}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--gold);transition:.25s}
+.nav-links a:hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;text-decoration:none;font-weight:700;border-radius:999px;padding:11px 22px;font-size:.95rem;transition:.2s;font-family:inherit}
+.btn-wa{background:#25d366;color:#083b1d}
+.btn-wa:hover{background:#1fbf5b}
+.btn-gold{background:linear-gradient(145deg,var(--gold),var(--copper));color:#fff;box-shadow:0 6px 16px rgba(200,120,30,.35)}
+.btn-ghost{border:2px solid var(--green-800);color:var(--green-800);background:transparent}
+.cart-btn{position:relative;background:var(--green-900);color:#fff;border-radius:999px;padding:10px 18px;font-weight:700;border:none;cursor:pointer;display:inline-flex;gap:8px;align-items:center;font-size:.9rem}
+.cart-btn .cnt{background:var(--gold);color:var(--green-950);border-radius:999px;padding:0 7px;font-size:.78rem}
+@media(max-width:820px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+header.hero{position:relative;min-height:92vh;display:grid;place-items:center;text-align:center;color:var(--cream);overflow:hidden;background:var(--green-950)}
+.hero::before{content:"";position:absolute;inset:0;background:url('https://sspark.genspark.ai/i/k4P7AQXYI2EcXdG0?width=2560') center/cover;opacity:.35}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,43,30,.55),rgba(12,43,30,.92))}
+.hero-in{position:relative;z-index:2;padding:70px 18px;max-width:840px}
+.hero .shru{font-size:2.6rem;color:var(--gold-soft);letter-spacing:6px}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.1;margin:8px 0 4px}
+.hero h1 span{color:var(--gold-soft)}
+.hero .tag{font-size:clamp(1rem,2.5vw,1.3rem);color:#e9e2cf}
+.hero .guj{font-family:'Noto Sans Gujarati';color:var(--gold-soft);font-size:1.05rem;margin-top:6px}
+.hero-cta{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-badges{margin-top:36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.badge{background:rgba(255,255,255,.1);border:1px solid rgba(244,193,93,.4);border-radius:14px;padding:10px 16px;font-size:.85rem;backdrop-filter:blur(4px)}
+.badge b{color:var(--gold-soft);display:block;font-size:1.05rem}
+
+/* ---------- section heads ---------- */
+.sec-head{text-align:center;margin-bottom:34px}
+.kicker{display:inline-block;background:var(--cream-2);color:var(--copper);border:1px solid #ead9b5;border-radius:999px;padding:5px 16px;font-size:.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(1.8rem,4.5vw,2.6rem);color:var(--green-900);margin-top:12px}
+.sec-head p{color:var(--muted);max-width:640px;margin:8px auto 0}
+
+/* ---------- how it works ---------- */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.step{background:var(--card);border:1px solid #efe4c8;border-radius:var(--r);padding:26px 22px;box-shadow:var(--shadow);position:relative}
+.step .num{width:44px;height:44px;border-radius:50%;background:linear-gradient(145deg,var(--gold),var(--copper));color:#fff;display:grid;place-items:center;font-weight:800;font-size:1.15rem;margin-bottom:14px}
+.step h3{color:var(--green-900);font-size:1.15rem}
+.step p{font-size:.9rem;color:var(--muted);margin-top:6px}
+
+/* ---------- thali cards ---------- */
+.thali-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;max-width:900px;margin:0 auto}
+.thali{border-radius:22px;overflow:hidden;background:var(--green-900);color:var(--cream);box-shadow:var(--shadow);position:relative}
+.thali img{width:100%;height:210px;object-fit:cover;display:block}
+.thali .body{padding:22px}
+.thali h3{color:var(--gold-soft);font-size:1.35rem}
+.thali ul{list-style:none;margin:12px 0 16px;font-size:.88rem;color:#e6dfc9}
+.thali li{padding:3px 0 3px 22px;position:relative}
+.thali li::before{content:"◆";position:absolute;left:0;color:var(--gold);font-size:.7rem;top:7px}
+.price-tag{position:absolute;top:14px;right:14px;background:var(--gold);color:var(--green-950);font-weight:800;border-radius:999px;padding:7px 16px;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.thali .btn{width:100%;justify-content:center}
+
+/* ---------- menu ---------- */
+.menu-band{background:linear-gradient(180deg,var(--cream-2),var(--cream));border-top:1px solid #ead9b5;border-bottom:1px solid #ead9b5}
+.cat-bar{display:flex;gap:10px;overflow-x:auto;padding:6px 2px 16px;scrollbar-width:none}
+.cat-bar::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1.5px solid var(--green-700);background:var(--card);color:var(--green-900);border-radius:999px;padding:9px 18px;font-weight:600;font-size:.88rem;cursor:pointer;transition:.2s;font-family:inherit}
+.chip.active{background:var(--green-800);color:var(--gold-soft);border-color:var(--green-800)}
+.search-in{width:100%;max-width:460px;display:block;margin:0 auto 18px;padding:13px 20px;border-radius:999px;border:1.5px solid #d9cba6;background:var(--card);font-size:.95rem;font-family:inherit;outline:none}
+.search-in:focus{border-color:var(--gold)}
+.menu-cols{columns:1;column-gap:26px}
+@media(min-width:640px){.menu-cols{columns:2}}
+.cat-block{break-inside:avoid;margin-bottom:30px}
+.cat-block>h3{color:var(--copper);font-size:1.25rem;border-bottom:2px dashed #dcc998;padding-bottom:8px;margin-bottom:6px;display:flex;gap:8px;align-items:center}
+.cat-note{font-size:.78rem;color:var(--muted);margin:2px 0 8px}
+.sub-group{font-size:.85rem;font-weight:700;color:var(--green-800);margin:14px 0 4px}
+.mi{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 2px;border-bottom:1px dotted #e0d3ac;font-size:.92rem}
+.mi .nm b{font-weight:600}
+.mi .nm small{display:block;color:var(--muted);font-size:.76rem}
+.mi .pr{white-space:nowrap;font-weight:700;color:var(--green-800)}
+.add-btn{border:none;background:var(--gold);color:var(--green-950);border-radius:8px;padding:3px 10px;font-weight:800;cursor:pointer;font-size:.8rem;margin-left:8px;font-family:inherit}
+.add-btn:hover{background:var(--gold-soft)}
+.pr-line{display:flex;align-items:baseline;gap:8px}
+
+/* ---------- booking ---------- */
+.booking-band{background:var(--green-950);color:var(--cream)}
+.booking-band .sec-head h2{color:var(--gold-soft)}
+.booking-band .sec-head p{color:#cfc7ae}
+.book-grid{display:grid;grid-template-columns:1fr;gap:26px;max-width:980px;margin:0 auto}
+@media(min-width:860px){.book-grid{grid-template-columns:1.2fr .8fr}}
+.form-card{background:rgba(255,255,255,.06);border:1px solid rgba(244,193,93,.3);border-radius:20px;padding:28px}
+.form-card label{display:block;font-size:.82rem;font-weight:600;color:var(--gold-soft);margin:14px 0 6px}
+.form-card input,.form-card select,.form-card textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.95);font-family:inherit;font-size:.95rem;outline:none;color:var(--ink)}
+.pay-row{display:flex;gap:12px;margin-top:6px}
+.pay-opt{flex:1;border:1.5px solid rgba(255,255,255,.3);border-radius:12px;padding:12px;text-align:center;cursor:pointer;font-size:.85rem;font-weight:600}
+.pay-opt input{display:none}
+.pay-opt.sel{border-color:var(--gold);background:rgba(244,193,93,.15)}
+.pay-opt .big{font-size:1.3rem;display:block}
+.book-info{display:flex;flex-direction:column;gap:14px}
+.info-card{background:rgba(255,255,255,.06);border:1px solid rgba(244,193,93,.3);border-radius:16px;padding:18px 20px;font-size:.92rem}
+.info-card b{color:var(--gold-soft)}
+.info-card a{color:var(--cream)}
+
+/* ---------- footer ---------- */
+footer{background:#081f15;color:#b9b09a;padding:44px 18px 90px;text-align:center;font-size:.85rem}
+footer .fbrand{font-family:'Yatra One';font-size:1.4rem;color:var(--gold-soft)}
+footer .links{margin:12px 0;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+footer a{color:#d8d0ba;text-decoration:none}
+
+/* ---------- floating mobile cart ---------- */
+.float-cart{position:fixed;left:14px;right:14px;bottom:14px;z-index:70;background:var(--green-900);color:#fff;border-radius:16px;box-shadow:0 12px 34px rgba(0,0,0,.4);display:none;justify-content:space-between;align-items:center;padding:13px 18px;cursor:pointer;border:none;font-family:inherit}
+.float-cart.show{display:flex}
+.float-cart b{color:var(--gold-soft)}
+@media(min-width:821px){.float-cart{display:none !important}}
+
+/* ---------- cart drawer ---------- */
+.overlay{position:fixed;inset:0;background:rgba(10,25,18,.6);z-index:80;opacity:0;pointer-events:none;transition:.25s}
+.overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(430px,100%);background:var(--cream);z-index:90;transform:translateX(105%);transition:.3s;display:flex;flex-direction:column;box-shadow:-12px 0 40px rgba(0,0,0,.25)}
+.drawer.open{transform:none}
+.drawer-head{background:var(--green-900);color:var(--cream);padding:18px 20px;display:flex;justify-content:space-between;align-items:center}
+.drawer-head h3{color:var(--gold-soft);font-size:1.2rem}
+.drawer-head button{background:none;border:none;color:#fff;font-size:1.4rem;cursor:pointer}
+.drawer-body{flex:1;overflow-y:auto;padding:16px 18px}
+.cart-item{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px dotted #ddd0a8;font-size:.92rem}
+.qty{display:flex;align-items:center;gap:10px}
+.qty button{width:28px;height:28px;border-radius:8px;border:1.5px solid var(--green-700);background:#fff;font-weight:800;cursor:pointer;color:var(--green-900)}
+.drawer-foot{padding:16px 18px;border-top:1px solid #e7dcc2;background:var(--card)}
+.total-row{display:flex;justify-content:space-between;font-weight:800;font-size:1.05rem;margin-bottom:12px}
+.drawer-foot .btn{width:100%;justify-content:center}
+.empty-msg{text-align:center;color:var(--muted);padding:40px 10px}
+
+</style>
+</head>
+<body>
+
+<!-- top info bar -->
+<div class="topbar">
+  <span>🕙 <b>समय:</b> 11:00–3:30 · 7:00–11:00</span>
+  <span>📞 <a href="tel:+919825140188"><b>+91 98251 40188</b></a></span>
+  <span>🛵 <b>Home Delivery</b> — COD / WhatsApp Pay</span>
+  <span>🛕 <b>100% શુદ્ધ શાકાહારી</b></span>
+</div>
+
+<!-- nav -->
+<nav>
+  <div class="nav-in">
+    <a class="brand" href="#top">
+      <span class="kalash">🪔</span>
+      <span><b>સ્વાગત</b><small>SWAGAT · Pure Veg</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#how">ऑर्डर कैसे करें</a>
+      <a href="#thali">थाली</a>
+      <a href="#menu">मेनू</a>
+      <a href="#booking">टेबल बुकिंग</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <button class="cart-btn" onclick="openCart()">🛒 थाली <span class="cnt" id="navCnt">0</span></button>
+      <a class="btn btn-wa" href="https://wa.me/919825140188" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+</nav>
+
+<!-- hero -->
+<header class="hero" id="top">
+  <div class="hero-in">
+    <div class="shru">॥ સ્વાગત ॥</div>
+    <h1>स्वागत रेस्टोरन्ट<br><span>शुद્ધ શાકાહારી ફેમિલી રેસ્ટોરેન્ટ</span></h1>
+    <p class="tag">Atithi Devo Bhava 🙏 — કાઠિયાવાડી હાંડીથી લઈને પંજાબી તડકા સુધી,<br>હવે ઘર બેઠા ફક્ત એક WhatsApp મેસેજ દૂર</p>
+    <p class="guj">शुद्ध शाकाहारी · जैन विशेष · ₹210 गुजराती थाली · होम डिलीवरी</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="#menu">📜 पूरा मेनू देखें</a>
+      <a class="btn btn-wa" href="https://wa.me/919825140188?text=%F0%9F%99%8F%20%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%91%E0%A4%B0%E0%A5%8D%E0%A4%A1%E0%A4%B0%20%E0%A4%95%E0%A4%B0%E0%A4%A8%E0%A4%BE%20%E0%A4%B9%E0%A5%88" target="_blank">WhatsApp पर ऑर्डर करें</a>
+      <a class="btn btn-ghost" style="border-color:#f4c15d;color:#f4c15d" href="#booking">🪑 टेबल बुक करें</a>
+    </div>
+    <div class="hero-badges">
+      <div class="badge"><b>280+</b>ડિશનો મેનુ</div>
+      <div class="badge"><b>₹210</b>થી શરૂ થાળી</div>
+      <div class="badge"><b>◉</b>જૈન સ્પેશિયલ ઉપલબ્ધ</div>
+      <div class="badge"><b>COD</b>કેશ ઓન ડિલિવરી</div>
+    </div>
+  </div>
+</header>
+
+<!-- how it works -->
+<section id="how">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">How It Works</span>
+      <h2>ऑर्डर करने की आसान रीत · ઑર્ડર કરવાની રીત</h2>
+      <p>बस 3 आसान स्टेप्स — घर बैठे गरमा-गरम खाना पाएं</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>डिश चुनें 🍽️</h3><p>नीचे पूरे मेनू कार्ड में से अपनी पसंदीदा डिशेस चुनकर थाली में डालें।</p></div>
+      <div class="step"><div class="num">2</div><h3>WhatsApp पर भेजें 📲</h3><p>एक क्लिक में आपका पूरा ऑर्डर सीधा हमारे WhatsApp पर पहुँच जाता है — हम तुरंत कन्फर्म करते हैं।</p></div>
+      <div class="step"><div class="num">3</div><h3>अपने हिसाब से पेमेंट 💵</h3><p>WhatsApp Pay / UPI करें या घर पर <b>Cash on Delivery</b> चुनें — दोनों चलेगा!</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- thali -->
+<section id="thali" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Daily Best Seller</span>
+      <h2>हमारी शान — थाली · થાળી</h2>
+      <p>Limited थाली — रोज़ ताज़ा, घी-मक्खन के साथ</p>
+    </div>
+    <div class="thali-grid">
+      <div class="thali">
+        <img src="https://sspark.genspark.ai/i/k4P7AQXYI2EcXdG0?width=2560" alt="Gujarati Thali" loading="lazy">
+        <div class="price-tag">₹210</div>
+        <div class="body">
+          <h3>ગુજરાતી થાળી · Gujarati Thali</h3>
+          <ul>
+            <li>2 Gujarati Sabji</li>
+            <li>4 Butter Chapati</li>
+            <li>1 Dal + Bhat (Dinner: Kadhi-Khichadi)</li>
+            <li>1 Butter Milk · 1 Papad · 1 Achhar · 1 Sweet</li>
+          </ul>
+          <button class="btn btn-gold" onclick="addItem('Thali Special|Gujarati Thali (Limited)')">थाली में डालें ＋</button>
+        </div>
+      </div>
+      <div class="thali">
+        <img src="https://sspark.genspark.ai/i/wSCp3VcwGy0YYIa2?width=2560" alt="Punjabi Thali" loading="lazy">
+        <div class="price-tag">₹260</div>
+        <div class="body">
+          <h3>પંજાબી થાળી · Punjabi Thali</h3>
+          <ul>
+            <li>1 Paneer Sabji + 1 Veg. Sabji</li>
+            <li>2 Butter Tandoori Roti</li>
+            <li>1 Dal Fry + Jeera Rice</li>
+            <li>1 Butter Milk · 1 Papad · 1 Achhar · 1 Sweet</li>
+          </ul>
+          <button class="btn btn-gold" onclick="addItem('Thali Special|Punjabi Thali (Limited)')">थाली में डालें ＋</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- menu -->
+<section class="menu-band" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Full Menu Card</span>
+      <h2>पूरा मेनू · સંપૂર્ણ મેનુ</h2>
+      <p>280+ डिश — मेनू कार्ड की हर चीज़, हर कीमत वही जो काउंटर पर है</p>
+    </div>
+    <input class="search-in" id="searchBox" type="text" placeholder="🔍 डिश खोजें… (जैसे: Paneer, Dosa, Khichadi)" oninput="renderMenu()">
+    <div class="cat-bar" id="catBar"></div>
+    <div class="menu-cols" id="menuBox"></div>
+  </div>
+</section>
+
+<!-- booking -->
+<section class="booking-band" id="booking">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Table Booking</span>
+      <h2>टेबल बुकिंग · ટેબલ બુકિંગ</h2>
+      <p>फॉर्म भरें — बुकिंग सीधे WhatsApp पर हमें पहुँच जाएगी, हम कन्फर्मेशन भेजेंगे</p>
+    </div>
+    <div class="book-grid">
+      <div class="form-card">
+        <label>आपका नाम / નામ</label>
+        <input id="bkName" type="text" placeholder="जैसे: શ્રી પટેલ">
+        <label>मोबाइल नंबर / મોબાઈલ</label>
+        <input id="bkPhone" type="tel" placeholder="10 अंकों का नंबर">
+        <label>तारीख / તારીખ</label>
+        <input id="bkDate" type="date">
+        <label>समय / સમય</label>
+        <select id="bkTime">
+          <option>दोपहर 12:00</option><option>दोपहर 1:00</option><option>दोपहर 2:00</option>
+          <option>शाम 7:00</option><option selected>शाम 8:00</option><option>शाम 9:00</option><option>रात 10:00</option>
+        </select>
+        <label>कितने व्यक्ति / કેટલા માણસો</label>
+        <select id="bkGuests">
+          <option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>6+ (बड़ा परिवार)</option>
+        </select>
+        <label>विशेष अनुरोध (वैकल्पिक) — जैसे जैन, बर्थडे</label>
+        <textarea id="bkNote" rows="2" placeholder="जैसे: जैन खाना, खिड़की के पास टेबल…"></textarea>
+        <button class="btn btn-wa" style="width:100%;justify-content:center;margin-top:18px" onclick="sendBooking()">📲 WhatsApp पर बुकिंग भेजें</button>
+      </div>
+      <div class="book-info">
+        <div class="info-card">🕒 <b>समय</b><br>दोपहर: 11:00 AM – 3:30 PM<br>रात: 7:00 PM – 11:00 PM</div>
+        <div class="info-card">📞 <b>फ़ोन / WhatsApp</b><br><a href="tel:+919825140188">+91 98251 40188</a></div>
+        <div class="info-card">🛕 <b>શુદ્ધ શાકાહારી</b><br>100% Pure Veg Kitchen · जैन स्पेशल उपलब्ध<br><small>South Indian: सुबह 7–11 व शाम 3–7</small></div>
+        <div class="info-card">💳 <b>पेमेंट विकल्प</b><br>WhatsApp Pay · UPI · Cash on Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="fbrand">॥ સ્વાગત ॥</div>
+  <div class="links">
+    <a href="#menu">मेनू</a> <a href="#booking">टेबल बुकिंग</a> <a href="https://wa.me/919825140188" target="_blank">WhatsApp ऑर्डर</a> <a href="tel:+919825140188">कॉल करें</a>
+  </div>
+  🛕 શુદ્ધ શાકાહારી ફેમિલી રેસ્ટોરેન્ટ · Atithi Devo Bhava 🙏<br>
+  🛵 Home Delivery — Cash on Delivery व WhatsApp Pay उपलब्ध · © 2026 Swagat Restaurant
+</footer>
+
+<!-- floating cart (mobile) -->
+<button class="float-cart" id="floatCart" onclick="openCart()">
+  <span>🛒 आपकी थाली — <span id="fcInfo"></span></span>
+  <span class="btn btn-gold" style="padding:8px 16px">ऑर्डर करें →</span>
+</button>
+
+<!-- cart drawer -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div class="drawer" id="drawer">
+  <div class="drawer-head">
+    <h3>🛒 आपकी थाली</h3>
+    <button onclick="closeCart()">✕</button>
+  </div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>कुल / Total</span><span id="cartTotal">₹0</span></div>
+    <div style="margin-bottom:12px">
+      <label style="font-size:.8rem;font-weight:700;color:var(--muted)">पेमेंट / ચુકવણી</label>
+      <div class="pay-row">
+        <label class="pay-opt sel" onclick="selPay(this)"><input type="radio" name="pay" value="Cash on Delivery" checked><span class="big">💵</span>Cash on Delivery</label>
+        <label class="pay-opt" onclick="selPay(this)"><input type="radio" name="pay" value="WhatsApp Pay / UPI"><span class="big">📲</span>WhatsApp Pay / UPI</label>
+      </div>
+    </div>
+    <label style="font-size:.8rem;font-weight:700;color:var(--muted)">आपका नाम</label>
+    <input id="custName" type="text" placeholder="नाम" style="width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid #d9cba6;margin-bottom:8px;font-family:inherit">
+    <label style="font-size:.8rem;font-weight:700;color:var(--muted)">मोबाइल नंबर</label>
+    <input id="custPhone" type="tel" placeholder="10 अंकों का नंबर" style="width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid #d9cba6;margin-bottom:8px;font-family:inherit">
+    <label style="font-size:.8rem;font-weight:700;color:var(--muted)">डिलीवरी पता</label>
+    <input id="custAddr" type="text" placeholder="मकान नं., एरिया, शहर" style="width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid #d9cba6;margin-bottom:8px;font-family:inherit">
+    <label style="font-size:.8rem;font-weight:700;color:var(--muted)">नोट (वैकल्पिक)</label>
+    <input id="orderNote" type="text" placeholder="जैसे: तीखा कम, जैन स्टाइल…" style="width:100%;padding:10px 12px;border-radius:10px;border:1.5px solid #d9cba6;margin-bottom:12px;font-family:inherit">
+    <button class="btn btn-wa" id="waOrderBtn" onclick="sendOrder()">📲 WhatsApp पर ऑर्डर भेजें</button>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   SWAGAT RESTAURANT — MENU DATA (स्वागत रेस्टोरन्ट)
+   Source: AC Menu 05-04-2026.pdf (हर डिश और कीमत मेनू कार्ड से verbatim)
+   ============================================================ */
+const MENU = [
+  {
+    id: "thali", en: "Thali Special", hi: "थाली स्पेशल", icon: "🍛", special: true,
+    items: [
+      { n: "Gujarati Thali (Limited)", hi: "ગુજરાતી થાળી", p: 210, d: "2 Gujarati Sabji · 4 Butter Chapati · 1 Dal + Bhat (Dinner: Kadhi-Khichadi) · 1 Butter Milk · 1 Papad · 1 Achhar · 1 Sweet" },
+      { n: "Punjabi Thali (Limited)", hi: "પંજાબી થાળી", p: 260, d: "1 Paneer Sabji · 1 Veg. Sabji · 2 Butter Tandoori Roti · 1 Dal Fry + Jeera Rice · 1 Butter Milk · 1 Papad · 1 Achhar · 1 Sweet" }
+    ]
+  },
+  {
+    id: "soup", en: "Soup", hi: "सूप", icon: "🍲",
+    items: [
+      { n: "Palak Garlic Soup", p: 140 }, { n: "Lemon Coriander Soup", p: 140 },
+      { n: "Veg. Manchurian Soup", p: 140 }, { n: "Veg. Manchow Soup", p: 140 },
+      { n: "Veg. Mushroom Soup", p: 140 }, { n: "Hot & Sour Soup", p: 140 },
+      { n: "Minestrone Soup", p: 140 }, { n: "Veg. Clear Soup", p: 110 },
+      { n: "Sweet Corn Veg. Soup", p: 140 }, { n: "Sweet Corn Plain Soup", p: 130 },
+      { n: "Cream of Tomato Soup", p: 140 }
+    ]
+  },
+  {
+    id: "salad", en: "Salad / Raita / Papad", hi: "सलाद / रायता / पापड़", icon: "🥗",
+    items: [
+      { n: "Pineapple Salad", p: 95 }, { n: "Green Salad", p: 105 }, { n: "Tomato Salad", p: 75 },
+      { n: "Pineapple Raita", p: 110 }, { n: "Veg. Raita", p: 110 }, { n: "Bundi Raita", p: 90 },
+      { n: "Cheese M. Papad", p: 110 }, { n: "Masala Papad", p: 85 }, { n: "Fry Papad", p: 45 },
+      { n: "Roasted Papad", p: 30 }, { n: "Khichiya Roasted Papad", p: 35 },
+      { n: "Khichiya Fry Papad", p: 55 }, { n: "Khichiya Masala Papad", p: 99 },
+      { n: "Khichiya Cheese M Papad", p: 130 }
+    ]
+  },
+  {
+    id: "jain", en: "Jain Special", hi: "जैन स्पेशल", icon: "ॐ", note: "No onion, no garlic",
+    items: [
+      { n: "Khoya Kaju Badami", p: 249 }, { n: "Kaju Curry", p: 275 },
+      { n: "Khoya Kaju (Sweet)", p: 239 }, { n: "Paneer Bhurji", p: 289 },
+      { n: "Paneer Butter Masala", p: 249 }, { n: "Paneer Tikka Masala", p: 295 },
+      { n: "Cheese Butter Masala", p: 269 }, { n: "Veg. Makhanwala", p: 199 },
+      { n: "Paneer Palak", p: 230 }, { n: "Paneer Matter", p: 239 }, { n: "Chana Masala", p: 179 }
+    ]
+  },
+  {
+    id: "starters", en: "Starters", hi: "स्टार्टर्स", icon: "🍢",
+    items: [
+      { n: "Sp. Paneer Tikka Dry", p: 410 }, { n: "Sp. Paneer Takatak Dry", p: 360 },
+      { n: "Chinese Sizzler Dry", p: 699 }, { n: "Baby Corn Chilly Dry", p: 279 },
+      { n: "Potato Chilly Dry", p: 259 }, { n: "Chana Chilly Dry", p: 259 },
+      { n: "Idly Chilly Dry", p: 259 }, { n: "Corn Chilly Dry", p: 259 },
+      { n: "Paneer Chilly Dry", p: 349 }, { n: "Paneer China Town", p: 359 },
+      { n: "Paneer Red Cook Dry", p: 349 }, { n: "Paneer Stick", p: 333 },
+      { n: "Paneer Schezwan Dry", p: 343 }, { n: "Paneer Garlic Dry", p: 349 },
+      { n: "Paneer Dragon Dry", p: 333 }, { n: "Paneer Shanghai Dry", p: 349 },
+      { n: "Paneer 65", p: 339 }, { n: "Paneer Lollipop (6 pcs)", p: 333 },
+      { n: "Veg. Spring Roll", p: null }, { n: "Veg. Palak Dry", p: 299 },
+      { n: "Veg. Lolipop (8 pcs)", p: 299 }, { n: "Veg. Harabhara Kabab", p: 299 },
+      { n: "Veg. Manchurian Dry", p: 210 }, { n: "Veg. 65", p: 275 },
+      { n: "Veg. Crispy Dry", p: 275 }, { n: "Gobi Manchurian Dry", p: 210 },
+      { n: "Mushroom Chilly Dry", p: 299 }, { n: "Paneer Manchurian Dry", p: 349 }
+    ]
+  },
+  {
+    id: "kathiyawadi", en: "Kathiyawadi Dishes", hi: "કાઠિયાવાડી ડિશેસ", icon: "🪔",
+    items: [
+      { n: "Today Sp. Kathiyawadi", p: 135 }, { n: "Sev Tomato", p: 125 },
+      { n: "Bharela Ringna (L. Time)", p: 111 }, { n: "Lasuniya Potato", p: 125 },
+      { n: "Kathiyawadi Undhiyu", p: 129 }, { n: "Sukhi Bhaji", p: 130 },
+      { n: "Bhindi Masala", p: 125 }, { n: "Bhindi Fry", p: 149 }, { n: "Dahi Bhindi", p: 170 },
+      { n: "Ringna Bharthu (Dinner Time)", p: 125 }, { n: "Mag Masala", p: 125 },
+      { n: "Vagharel Rotalo", p: 169 }, { n: "Khichadi (Dinner Time)", p: 60 },
+      { n: "Masala Khichadi (Dinner Time)", p: 85 }, { n: "Khichadi-Kadhi (Dinner Time)", p: 95 },
+      { n: "Masala Khichadi-Kadhi (Dinner Time)", p: 119 }, { n: "Dal Khichadi", p: 159 },
+      { n: "Dal Khichadi Tadka", p: 169 }, { n: "Dal Palak Khichadi", p: 169 },
+      { n: "Dal Palak Khichadi Tadka", p: 185 }, { n: "Kaju Gathiya", p: 175 },
+      { n: "Lasun Gathiya", p: 145 }, { n: "Dahi Gathiya", p: 155 }, { n: "Dahi Tikhari", p: 179 },
+      { n: "Kadhi (Dinner Time)", p: 40 }, { n: "Kathiyawadi Bhat", p: 60 },
+      { n: "Butter Milk", p: 35 }, { n: "Masala Butter Milk", p: 40 },
+      { n: "Good", p: 25 }, { n: "Ghee", p: 49 }
+    ]
+  },
+  {
+    id: "chinese", en: "Chinese", hi: "चाइनीज़", icon: "🥡",
+    items: [
+      { n: "Paneer Chilly Gravy", p: 299 }, { n: "Paneer Manchurian Gravy", p: 299 },
+      { n: "Veg. Manchurian Gravy", p: 210 }, { n: "Veg. Garlic Manchurian", p: 225 },
+      { n: "Veg. American Chopsy", p: 230 }, { n: "Veg. Chinese Chopsy", p: 249 },
+      { n: "Gobi Manchurian Gravy", p: 239 }
+    ]
+  },
+  {
+    id: "rice", en: "Chinese Rice", hi: "चाइनीज़ राइस", icon: "🍚",
+    items: [
+      { n: "Manchurian Fried Rice", p: 215 }, { n: "Veg. Fried Rice", p: 205 },
+      { n: "Tripple Fried Rice", p: 299 }, { n: "Singapuri Fried Rice", p: 229 },
+      { n: "Schezwan Fried Rice", p: 219 }, { n: "Mushroom Onion Fried Rice", p: 259 },
+      { n: "Lemon Coriander Fried Rice", p: 230 }, { n: "Veg. Chopper Rice", p: 259 },
+      { n: "Sp. Veg. Combination Fried Rice", p: 289 },
+      { n: "Sp. Hong-kong with Gravy Fried Rice", p: 299 },
+      { n: "Burnt Garlic Fried Rice", p: 269 }, { n: "Paneer Fried Rice", p: 275 }
+    ]
+  },
+  {
+    id: "noodles", en: "Chinese Noodles", hi: "चाइनीज़ नूडल्स", icon: "🍜",
+    items: [
+      { n: "Veg. Hakka Noodles", p: 190 }, { n: "Chinese Bhel", p: 230 },
+      { n: "Veg. Chow Chow", p: 219 }, { n: "Schezwan Noodles", p: 210 },
+      { n: "Singapuri Noodles", p: 230 }, { n: "Manchurian Noodles", p: 205 },
+      { n: "Chilli Garlic Noodles", p: 259 }
+    ]
+  },
+  {
+    id: "punjabi-sweet", en: "Punjabi Sweet Sabji", hi: "पंजाबी स्वीट सब्जी", icon: "🧈",
+    items: [
+      { n: "Sp. Navratan Korma", p: 245 }, { n: "Dum Aloo Kashmiri", p: 209 },
+      { n: "Khoya Kaju Badami", p: 249 }, { n: "Khoya Kaju", p: 239 },
+      { n: "Methi Malai Mutter", p: 231 }, { n: "Kashmiri Kofta", p: 239 },
+      { n: "Malai Kofta", p: 239 }
+    ]
+  },
+  {
+    id: "kaju", en: "Kaju Dishes", hi: "काजू डिशेस", icon: "🥜",
+    items: [
+      { n: "Sp. Kaju Dilkhus Masala", p: 349 }, { n: "Sp. Cheese Kaju Masala", p: 311 },
+      { n: "Sp. Cheese Kaju Paneer Masala", p: 359 }, { n: "Sp. Kaju Angara", p: 369 },
+      { n: "Paneer Kaju", p: 299 }, { n: "Kaju Butter Masala", p: 275 },
+      { n: "Kaju Curry", p: 275 }, { n: "Kaju Kadai", p: 289 }
+    ]
+  },
+  {
+    id: "cheese", en: "Cheese Dishes", hi: "चीज़ डिशेस", icon: "🧀", note: "*Extra Butter ₹30/- · *Extra Cheese ₹40/-",
+    items: [
+      { n: "Sp. Cheese Angara", p: 399 }, { n: "Sp. Cheese Bhuna Kofta", p: 299 },
+      { n: "Sp. Cheese Lasaniya", p: 299 }, { n: "Cheese Kaju Badami Palak", p: 289 },
+      { n: "Cheese Mushroom Masala", p: 289 }, { n: "Cheese Garlic Palak", p: 269 },
+      { n: "Cheese Butter Masala", p: 269 }, { n: "Cheese Anguri", p: 320 },
+      { n: "Cheese Paneer Masala", p: 299 }
+    ]
+  },
+  {
+    id: "kofta", en: "Kofta Dishes", hi: "कोफ्ता डिशेस", icon: "♨️",
+    items: [
+      { n: "Sp. Kaju Kofta", p: 275 }, { n: "Badami Kofta", p: 260 },
+      { n: "Cheese Kofta / Nargish Kofta", p: 275 }, { n: "Paneer Kofta", p: 259 },
+      { n: "Veg. Kofta", p: 229 }
+    ]
+  },
+  {
+    id: "paneer", en: "Paneer Dishes", hi: "पनीर डिशेस", icon: "🧆",
+    items: [
+      { n: "Today Sp. Paneer", p: 485 }, { n: "Sp. Paneer Swagat", p: 299 },
+      { n: "Sp. Paneer Pasanda", p: 289 }, { n: "Sp. Paneer Kaju", p: 289 },
+      { n: "Sp. Paneer Angara", p: 349 }, { n: "Sp. Paneer Amritsari", p: 275 },
+      { n: "Sp. Paneer Lajawab", p: 289 }, { n: "Sp. Paneer Chatakedar", p: 275 },
+      { n: "Sp. Paneer Shabnami", p: 385 }, { n: "Sp. Paneer Shahi Korma (Sweet)", p: 239 },
+      { n: "Sp. Paneer Roll", p: 299 }, { n: "Sp. Paneer Laziz", p: 425 },
+      { n: "Sp. Paneer Triranga", p: 439 }, { n: "Sp. Paneer Khajana", p: 399 },
+      { n: "Sp. Paneer Pahadi", p: 380 }, { n: "Sp. Paneer Hangama", p: 395 },
+      { n: "Sp. Paneer Rajarani", p: 379 }, { n: "Paneer Patiyala", p: 279 },
+      { n: "Paneer Chatpata", p: 289 }, { n: "Paneer Bhurji", p: 289 },
+      { n: "Paneer Tikka Masala", p: 295 }, { n: "Paneer Butter Masala", p: 249 },
+      { n: "Paneer Mutter", p: 239 }, { n: "Paneer Palak", p: 230 },
+      { n: "Paneer Pesawari", p: 275 }, { n: "Paneer Lawabdar", p: 289 },
+      { n: "Paneer Dopyaza", p: 289 }, { n: "Paneer Achari", p: 289 },
+      { n: "Paneer Methi", p: 249 }, { n: "Paneer Makhani", p: 249 },
+      { n: "Paneer Mushroom Masala", p: 320 }, { n: "Paneer Balti", p: 265 },
+      { n: "Paneer Handi", p: 265 }, { n: "Paneer Garlic Tawa", p: 295 },
+      { n: "Paneer Tawa", p: 285 }, { n: "Paneer Tufani", p: 279 },
+      { n: "Paneer Kadai", p: 279 }, { n: "Paneer Bhurji Dry", p: 320 }
+    ]
+  },
+  {
+    id: "punjabi", en: "Punjabi Dishes", hi: "पंजाबी डिशेस", icon: "🍛",
+    items: [
+      { n: "Today Sp. Veg.", p: 425 }, { n: "Sp. Veg. Swagat", p: 299 },
+      { n: "Sp. Veg. Jaipuri", p: 249 }, { n: "Sp. Palak Malai Lasoni Tadka", p: 259 },
+      { n: "Sp. Veg. Chilly Billy (Green)", p: 255 }, { n: "Sp. Veg. Jwalamukhi", p: 299 },
+      { n: "Sp. Veg. Hariyali", p: 330 }, { n: "Veg. Angara", p: 295 },
+      { n: "Veg. Chatpata", p: 255 }, { n: "Veg. Kolhapuri", p: 220 },
+      { n: "Veg. Makhanwala", p: 211 }, { n: "Dum Aloo Punjabi", p: 225 },
+      { n: "Baby Corn Butter Masala", p: 230 }, { n: "Baby Corn with Mushroom", p: 270 },
+      { n: "Veg. Balti", p: 225 }, { n: "Veg. Patiyala", p: 250 },
+      { n: "Veg. Toofani", p: 265 }, { n: "Veg. Hydrabadi", p: 265 },
+      { n: "Veg. Deewani Kadai", p: 270 }, { n: "Corn Palak", p: 220 },
+      { n: "Veg. Handi", p: 240 }, { n: "Mushroom Masala", p: 260 },
+      { n: "Veg. Garlic Tawa", p: 249 }, { n: "Veg. Tawa", p: 239 },
+      { n: "Green Peas Masala", p: 199 }, { n: "Chana Masala / Alu Mutter", p: 179 },
+      { n: "Veg. Bhurji", p: 239 }, { n: "Veg. Khima", p: 255 },
+      { n: "Veg. Rajarani", p: 289 }, { n: "Plain Palak / Alu Palak / Alu Gobi", p: 170 },
+      { n: "Mix Vegetable", p: 175 }
+    ]
+  },
+  {
+    id: "dal", en: "Dal Item", hi: "दाल", icon: "🥣",
+    items: [
+      { n: "Dal Fry", p: 135 }, { n: "Dal Fry Butter", p: 140 },
+      { n: "Dal Fry Tadka", p: 150 }, { n: "Dal Tadka Butter", p: 155 }
+    ]
+  },
+  {
+    id: "breads", en: "Roti, Naan & Breads", hi: "रोटी-नान-पराठा", icon: "🫓",
+    groups: [
+      { t: "Tandoori Roti · તાંદૂરી રોટલી", items: [ { n: "Roti", p: 28 }, { n: "Butter Roti", p: 31 } ] },
+      { t: "Paratha · પરાઠા", items: [ { n: "Parotha", p: 45 }, { n: "Butter Parotha", p: 49 }, { n: "Alu Parotha with Curd", p: 129 } ] },
+      { t: "Naan & Kulcha", items: [ { n: "Naan", p: 55 }, { n: "Butter Naan", p: 59 }, { n: "Garlic Naan", p: 85 }, { n: "Cheese Naan", p: 95 }, { n: "Cheese Garlic Naan", p: 111 }, { n: "Kulcha", p: 75 }, { n: "Butter Kulcha", p: 79 } ] },
+      { t: "Tawa Roti & Paratha", items: [ { n: "Plain Chapati", p: 18 }, { n: "Butter Chapati", p: 20 }, { n: "Butter Tawa Parotha", p: 31 }, { n: "Sada Tawa Parotha", p: 28 } ] },
+      { t: "Bajri Na Rotla · બાજરી ના રોટલા", items: [ { n: "Bajri Rotla", p: 30 }, { n: "Bajri Butter Rotla", p: 35 }, { n: "Lasaniya Butter Rotla", p: 57 } ] }
+    ]
+  },
+  {
+    id: "pulav", en: "Rice / Pulav / Biriyani", hi: "राइस / पुलाव / बिरयानी", icon: "🍚",
+    items: [
+      { n: "Jeera Rice", p: 115 }, { n: "Plain Rice", p: 110 }, { n: "Masala Rice", p: 169 },
+      { n: "Sp. Kaju Pulav", p: 229 }, { n: "Cheese Pulav", p: 219 },
+      { n: "Paneer Pulav", p: 215 }, { n: "Peas Pulav", p: 175 },
+      { n: "Veg. Pulav", p: 175 }, { n: "Kashmiri Pulav (Sweet)", p: 175 },
+      { n: "Hyderabadi Biriyani", p: 189 }, { n: "Handi Biriyani", p: 189 },
+      { n: "Veg. Biriyani", p: 189 }
+    ]
+  },
+  {
+    id: "southindian", en: "South Indian", hi: "साउथ इंडियन", icon: "🥞", note: "समय: सुबह 7–11 और शाम 3–7 (7am–11am & 3pm–7pm)",
+    items: [
+      { n: "Sp. Swagat Dhosa", p: 160 }, { n: "Masala Dhosa", p: 120 },
+      { n: "Sada Dhosa", p: 95 }, { n: "Butter Sada Dhosa", p: 105 },
+      { n: "Paper Sada Dhosa", p: 125 }, { n: "Butter Masala Dhosa", p: 130 },
+      { n: "Cheese Masala Dhosa", p: 144 }, { n: "Cheese Sada Dhosa", p: 130 },
+      { n: "Cheese Masala Dhosa Butter", p: 155 }, { n: "Cheese Mysore Masala Dhosa", p: 150 },
+      { n: "Cheese Mysore Sada Dhosa", p: 135 }, { n: "Mysore Masala Dhosa", p: 130 },
+      { n: "Mysore Sada Dhosa", p: 115 }, { n: "Rawa Masala Dhosa", p: 130 },
+      { n: "Rawa Plain Dhosa", p: 110 }, { n: "Surati Paneer Masala Dhosa", p: 185 },
+      { n: "Pizza Dhosa", p: 220 }, { n: "Palak Masala Dhosa", p: 130 },
+      { n: "Palak Cheese Dhosa", p: 199 }, { n: "Chinese Dhosa", p: 160 },
+      { n: "Masala Uttapam", p: 130 }, { n: "Tomato Uttapam", p: 115 },
+      { n: "Sada Uttapam", p: 99 }, { n: "Onion Uttapam", p: 115 },
+      { n: "Onion Tomato Uttapam", p: 120 }, { n: "Mix Uttapam", p: 125 },
+      { n: "Idli Sambhar", p: 90 }, { n: "Idli Vada", p: 99 },
+      { n: "Vada Sambhar", p: 95 }, { n: "Dahi Vada", p: 130 },
+      { n: "Dahi Idli", p: 110 }, { n: "Fry Idli", p: 115 }, { n: "Masala Idli", p: 100 }
+    ]
+  },
+  {
+    id: "snacks", en: "Snacks & Farshan", hi: "स्नैक्स / ફરસાણ", icon: "🥟",
+    items: [
+      { n: "Sp. Fafda", p: 65 }, { n: "Sp. Vanela Gathiya", p: 65 },
+      { n: "Bataka Puri", p: 65 }, { n: "Bataka Powa (Only Morning)", p: 65 },
+      { n: "Cheese Pakoda", p: 155 }, { n: "Paneer Pakoda", p: 130 },
+      { n: "Methi Na Gota", p: 65 }, { n: "Jalebi", p: 65 },
+      { n: "Onion Pakoda", p: 85 }, { n: "Bataka Vada", p: 85 }, { n: "Finger Chips", p: 150 }
+    ]
+  },
+  {
+    id: "sandwich", en: "Sandwich", hi: "સેન્ડવીચ", icon: "🥪",
+    items: [
+      { n: "Veg. Sandwich", p: 90 }, { n: "Veg. Cheese Sandwich", p: 141 },
+      { n: "Veg. Grilled Sandwich", p: 130 }, { n: "Cheese Sandwich", p: 145 },
+      { n: "Cheese Grilled Sandwich", p: 149 }, { n: "Bread Butter", p: 80 },
+      { n: "Toast Butter", p: 90 }, { n: "Bread Butter Jam", p: 89 },
+      { n: "Veg. Cheese Grilled Sandwich", p: 160 }, { n: "Cheese Jam Sandwich", p: 149 },
+      { n: "Cheese Toast Jam Sandwich", p: 155 }, { n: "Toast Butter Jam", p: 111 }
+    ]
+  },
+  {
+    id: "pizza", en: "Pizza", hi: "પિઝા", icon: "🍕",
+    items: [
+      { n: "Mexican Pizza (7\")", p: 210, d: "Pizza base, cheddar cheese, processed cheese, corn, onion, olives, bell pepper, cabbage, sauce, Italian herbs" },
+      { n: "American Garden (7\")", p: 199, d: "Pizza base, cheddar & mozzarella cheese, pizza sauce, onion, capsicum, black olives, Italian herbs, bab peppers" },
+      { n: "Italian Pizza", p: 219, d: "Pizza base, cheddar & processed cheese, Italian pizza sauce, onion, capsicum, olive, jalapeno, Italian herbs" },
+      { n: "Sp. Cheese Pizza", p: 209, d: "Pizza base, cheddar & processed cheese, pizza sauce, Italian herbs" },
+      { n: "Sp. Cheese Garlic Bread", p: 155, d: "Salted butter, olive oil, minced garlic, salt & freshly ground black pepper" }
+    ]
+  },
+  {
+    id: "drinks", en: "Hot Drinks", hi: "हॉट ड्रिंक्स", icon: "☕",
+    items: [
+      { n: "Sp. Swagat Tea", p: 35 }, { n: "Ness Coffee", p: 40 }, { n: "Hot Milk Glass", p: 45 }
+    ]
+  }
+];
+
+/* ============================================================
+   SWAGAT RESTAURANT — app.js
+   Cart + WhatsApp order + Table booking (pure client-side)
+   ============================================================ */
+
+/* ==== ⚙️ CONFIG — यहाँ अपना WhatsApp नंबर बदलें (91 = भारत कोड, कोई + या स्पेस नहीं) ==== */
+const CONFIG = {
+  whatsappNumber: "919825140188",   // 👈 अपना नंबर यहाँ डालें
+  restaurantName: "Swagat Restaurant · સ્વાગત",
+  currency: "₹"
+};
+
+/* ---------- state ---------- */
+let cart = {};          // { "Category|Item": {cat, name, price, qty} }
+let activeCat = "all";
+
+/* ---------- render menu ---------- */
+function money(p){ return p == null ? "—" : CONFIG.currency + p; }
+
+function itemRow(cat, it){
+  const key = cat.en + "|" + it.n;
+  const inCart = cart[key] ? cart[key].qty : 0;
+  return `<div class="mi">
+    <div class="nm"><b>${it.n}</b>${it.d ? `<small>${it.d}</small>` : ""}</div>
+    <div class="pr-line">
+      <span class="pr">${money(it.p)}</span>
+      ${it.p != null ? `<button class="add-btn" data-key='${key.replace(/'/g,"\\'")}' onclick="addItem(this.dataset.key)">＋</button>` : ""}
+      ${inCart ? `<span style="font-size:.78rem;color:var(--ok);font-weight:700">×${inCart}</span>` : ""}
+    </div>
+  </div>`;
+}
+
+function renderMenu(){
+  const q = (document.getElementById("searchBox").value || "").toLowerCase();
+  const box = document.getElementById("menuBox");
+  let html = "";
+  MENU.forEach(cat => {
+    if (activeCat !== "all" && activeCat !== cat.id) return;
+    let items = cat.items || [];
+    if (cat.groups) items = cat.groups.flatMap(g => g.items);
+    if (q) items = items.filter(i => i.n.toLowerCase().includes(q) || (i.d||"").toLowerCase().includes(q));
+    if (!items.length) return;
+    html += `<div class="cat-block"><h3><span>${cat.icon}</span> ${cat.en} · <span style="font-family:'Noto Sans Gujarati'">${cat.hi}</span></h3>`;
+    if (cat.note) html += `<div class="cat-note">✦ ${cat.note}</div>`;
+    if (cat.groups){
+      cat.groups.forEach(g => {
+        html += `<div class="sub-group">${g.t}</div>` + g.items.map(i => itemRow(cat,i)).join("");
+      });
+    } else {
+      html += items.map(i => itemRow(cat,i)).join("");
+    }
+    html += `</div>`;
+  });
+  box.innerHTML = html || `<p class="empty-msg">कोई डिश नहीं मिली 🙏 — कृपया दूसरा नाम खोजें</p>`;
+}
+
+function renderChips(){
+  const bar = document.getElementById("catBar");
+  bar.innerHTML = [{id:"all",en:"सभी सब्ज़ी — Full Menu",icon:"✨"}]
+    .concat(MENU)
+    .map(c => `<button class="chip ${c.id===activeCat?"active":""}" onclick="setCat('${c.id}')">${c.icon} ${c.en}</button>`)
+    .join("");
+}
+function setCat(id){ activeCat = id; renderChips(); renderMenu(); }
+
+/* ---------- cart ---------- */
+function addItem(key){
+  const [catEn, ...rest] = key.split("|");
+  const name = rest.join("|");
+  const cat = MENU.find(c => c.en === catEn);
+  const it = (cat.items || cat.groups.flatMap(g=>g.items)).find(i => i.n === name);
+  if (!it || it.p == null) return;
+  if (!cart[key]) cart[key] = { cat: cat.en, name, price: it.p, qty: 0 };
+  cart[key].qty++;
+  refresh();
+}
+function changeQty(key, d){
+  if (!cart[key]) return;
+  cart[key].qty += d;
+  if (cart[key].qty <= 0) delete cart[key];
+  refresh();
+}
+function cartCount(){ return Object.values(cart).reduce((s,i)=>s+i.qty,0); }
+function cartTotal(){ return Object.values(cart).reduce((s,i)=>s+i.qty*i.price,0); }
+
+function refresh(){ renderMenu(); renderCartUI(); }
+
+function renderCartUI(){
+  const n = cartCount(), t = cartTotal();
+  document.getElementById("navCnt").textContent = n;
+  const fc = document.getElementById("floatCart");
+  if (n > 0){ fc.classList.add("show"); document.getElementById("fcInfo").innerHTML = `<b>${n} आइटम</b> · ${CONFIG.currency}${t}`; }
+  else fc.classList.remove("show");
+
+  const body = document.getElementById("cartBody");
+  const list = Object.entries(cart);
+  if (!list.length){
+    body.innerHTML = `<p class="empty-msg">आपकी थाली अभी खाली है 🍽️<br><small>मेनू से अपनी पसंदीदा डिश चुनें</small></p>`;
+  } else {
+    body.innerHTML = list.map(([k,i]) => `
+      <div class="cart-item">
+        <div><b>${i.name}</b><br><small style="color:var(--muted)">${CONFIG.currency}${i.price} × ${i.qty}</small></div>
+        <div class="qty">
+          <button onclick="changeQty('${k.replace(/'/g,"\\'")}',-1)">−</button>
+          <span>${i.qty}</span>
+          <button onclick="changeQty('${k.replace(/'/g,"\\'")}',1)">＋</button>
+        </div>
+      </div>`).join("");
+  }
+  document.getElementById("cartTotal").textContent = CONFIG.currency + t;
+  document.getElementById("waOrderBtn").disabled = !list.length;
+  document.getElementById("waOrderBtn").style.opacity = list.length ? 1 : .5;
+}
+
+/* ---------- drawer ---------- */
+function openCart(){ document.getElementById("drawer").classList.add("open"); document.getElementById("overlay").classList.add("open"); }
+function closeCart(){ document.getElementById("drawer").classList.remove("open"); document.getElementById("overlay").classList.remove("open"); }
+
+/* ---------- WhatsApp ORDER ---------- */
+function sendOrder(){
+  const list = Object.values(cart);
+  if (!list.length) return;
+  const name = document.getElementById("custName").value.trim();
+  const phone = document.getElementById("custPhone").value.trim();
+  const addr = document.getElementById("custAddr").value.trim();
+  const pay = document.querySelector('input[name="pay"]:checked').value;
+  let msg = `🙏 *${CONFIG.restaurantName}* — नया ऑर्डर\n`;
+  msg += `━━━━━━━━━━━━━━\n*ऑर्डर:*\n`;
+  list.forEach((i,idx) => { msg += `${idx+1}. ${i.name} × ${i.qty} = ${CONFIG.currency}${i.price*i.qty}\n`; });
+  msg += `━━━━━━━━━━━━━━\n*कुल: ${CONFIG.currency}${cartTotal()}*\n`;
+  msg += `\n👤 नाम: ${name || "—"}\n📞 फ़ोन: ${phone || "—"}\n🏠 पता: ${addr || "—"}\n💳 पेमेंट: *${pay}*\n`;
+  if (document.getElementById("orderNote").value.trim()) msg += `📝 नोट: ${document.getElementById("orderNote").value.trim()}\n`;
+  window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=` + encodeURIComponent(msg), "_blank");
+}
+
+/* ---------- WhatsApp TABLE BOOKING ---------- */
+function sendBooking(){
+  const name = document.getElementById("bkName").value.trim();
+  const phone = document.getElementById("bkPhone").value.trim();
+  const date = document.getElementById("bkDate").value;
+  const time = document.getElementById("bkTime").value;
+  const guests = document.getElementById("bkGuests").value;
+  const note = document.getElementById("bkNote").value.trim();
+  let msg = `🍽️ *${CONFIG.restaurantName}* — टेबल बुकिंग\n`;
+  msg += `━━━━━━━━━━━━━━\n👤 नाम: ${name || "—"}\n📞 फ़ोन: ${phone || "—"}\n`;
+  msg += `📅 तारीख: ${date || "—"}\n⏰ समय: ${time || "—"}\n👨‍👩‍👧 व्यक्ति: ${guests}\n`;
+  if (note) msg += `📝 नोट: ${note}\n`;
+  msg += `\nकृपया कन्फर्म करें 🙏`;
+  window.open(`https://wa.me/${CONFIG.whatsappNumber}?text=` + encodeURIComponent(msg), "_blank");
+}
+
+/* ---------- pay option toggle ---------- */
+function selPay(el){
+  document.querySelectorAll(".pay-opt").forEach(p => p.classList.remove("sel"));
+  el.classList.add("sel");
+  el.querySelector("input").checked = true;
+}
+
+/* ---------- init ---------- */
+document.addEventListener("DOMContentLoaded", () => {
+  renderChips(); renderMenu(); renderCartUI();
+  document.getElementById("bkDate").min = new Date().toISOString().split("T")[0];
+});
+
+</script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>
